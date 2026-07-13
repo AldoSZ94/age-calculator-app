@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link type="image/svg+xml" href="/favicon.svg" rel="icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age calculator app</title>
+  </head>
+  <body class="font-poppins flex min-h-screen items-center bg-gray-100">
+    <main
+      class="mx-auto w-9/10 max-w-3xl rounded-2xl rounded-br-[150px] bg-white p-9"
+    >
+      <!-- Sección Formulario -->
+      <section>
+        <form
+          class="relative border-b border-b-gray-200 font-bold tracking-widest uppercase md:p-0"
+          novalidate
+        >
+          <div class="flex max-w-120 gap-5 pb-12">
+            <div class="flex min-w-0 flex-1 flex-col gap-2">
+              <label class="text-[12px] text-gray-500" for="day">Day</label>
+              <input
+                class="rounded-sm border border-gray-200 p-3 placeholder:text-xl placeholder:font-black placeholder:text-gray-500 focus:border-gray-500 focus:outline-none"
+                id="day"
+                data-input
+                type="number"
+                required
+                placeholder="DD"
+                min="1"
+                max="31"
+              />
+              <p
+                class="text-[10px] font-normal tracking-normal text-red-400 normal-case"
+              ></p>
+            </div>
+            <div class="flex min-w-0 flex-1 flex-col gap-2">
+              <label class="text-[12px] text-gray-500" for="month">Month</label>
+              <input
+                class="rounded-sm border border-gray-200 p-3 placeholder:text-xl placeholder:font-black placeholder:text-gray-500 focus:border-gray-500 focus:outline-none"
+                id="month"
+                data-input
+                type="number"
+                required
+                placeholder="MM"
+                min="1"
+                max="12"
+              />
+              <p
+                class="text-[10px] font-normal tracking-normal text-red-400 normal-case"
+              ></p>
+            </div>
+            <div class="flex min-w-0 flex-1 flex-col gap-2">
+              <label class="text-[12px] text-gray-500" for="year">Year</label>
+              <input
+                class="rounded-sm border border-gray-200 p-3 placeholder:text-xl placeholder:font-black placeholder:text-gray-500 focus:border-gray-500 focus:outline-none"
+                id="year"
+                data-input
+                type="number"
+                required
+                placeholder="YYYY"
+                min="1900"
+              />
+              <p
+                class="text-[10px] font-normal tracking-normal text-red-400 normal-case"
+              ></p>
+            </div>
+          </div>
+          <button
+            class="absolute right-1/2 size-[clamp(60px,5vw,80px)] translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-purple-500 p-3 md:right-0 md:translate-x-1"
+            id="submit-button"
+            type="submit"
+            aria-label="Calculate age"
+          >
+            <img class="h-full w-full" src="./src/assets/icon-arrow.svg" alt />
+          </button>
+        </form>
+      </section>
+      <!-- Sección de resultados -->
+      <section
+        class="pt-12 text-[clamp(36px,8vw,80px)] font-black italic md:pt-15"
+      >
+        <p>
+          <span class="text-purple-500" data-result>--</span><span>years</span>
+        </p>
+        <p>
+          <span class="text-purple-500" data-result>--</span><span>months</span>
+        </p>
+        <p>
+          <span class="text-purple-500" data-result>--</span><span>days</span>
+        </p>
+      </section>
+    </main>
+    <script src="/src/main.js" type="module"></script>
+  </body>
+</html>
