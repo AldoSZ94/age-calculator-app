@@ -22,7 +22,7 @@ La interfaz fue construida utilizando Tailwind CSS y JavaScript, priorizando una
 
 ## 🚀 Demo
 
-👉 https://age-calculator-app-aldosz94.vercel.app/
+👉 https://age-calculator-app-aldosz94.netlify.app/
 
 ---
 
